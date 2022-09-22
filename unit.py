@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from abc import ABC, abstractmethod
+from abc import ABC
 from random import uniform
 from typing import Optional
 
@@ -46,7 +46,7 @@ class BaseUnit(ABC):
         unit_damage = self.weapon.damage * self.unit_class.attack
 
         if target.stamina > target.armor.stamina_per_turn:
-            target.armor = target.armor.defence * target.unit_class.armor
+            target_armor = target.armor.defence * target.unit_class.armor
             target.stamina -= target.armor.stamina_per_turn
         else:
             target_armor = 0
