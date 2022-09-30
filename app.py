@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, request
 
 from classes.classes import Arena
 from classes.classes import WarriorClass, ThiefClass, unit_classes
-from equipment import Equipment
+from classes.equipment import Equipment
 from classes.unit import PlayerUnit, EnemyUnit
 
 app = Flask(__name__)
